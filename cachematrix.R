@@ -1,15 +1,27 @@
-## Put comments here that give an overall description of what your
-## functions do
+## create an object to a matrix, invert the matrix and store it
+## it, later use cacheSolve to fetch it if it's the same matrix
 
-## Write a short comment describing this function
+## make object (matrix) 
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix <- function(x = matrix()) {# input x will be a matrix
+          iv <- NuLL #iv will be our inverted matrix and it's reset to NuLL
+                     #everytime makeCachematrix is called
+          set <- function (y) {
+              x <<- y
+              iv <<- NULL
+          }
+          
 }
 
 
-## Write a short comment describing this function
+## inverted matrix and store it.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        iv <- x$getinverse() ## Return a matrix that is the inverse of 'x'
+        if (!is.invert(iv)) {
+            message ("get it inverted")
+            solve(x)
+            returnx)
+        }
+       iv
 }
